@@ -151,6 +151,11 @@ namespace CoC_character_maker
             int Num = (rnd.Next(1, 7) + rnd.Next(1, 7) + 6)*5;
             return Num;
         }
+        static public int[] Gabe()
+        {
+            int[] stats = { 15, 15, 15, 15, 15, 0, 0, 15, 15 };
+            return stats;
+        }
 
     }
 }

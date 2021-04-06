@@ -26,10 +26,17 @@ namespace CoC_character_maker
                     {
                         exit = true;
                         break;
-                    } else if (Input == "R")
+                    }
+                    else if (Input == "R")
                     {
 
-                    } else if (Input == "S")
+                    }
+                    else if (Input == "Gabe")
+                    {
+                        stats = Char.Gabe();
+                        break;
+                    }
+                    else if (Input == "S")
                     {
                         break;
                     }
@@ -57,7 +64,8 @@ namespace CoC_character_maker
                     {
                         exit = true;
                         break;
-                    } else if (Input == "F") 
+                    }
+                    else if (Input == "F")
                     {
                         break;
                     } else
@@ -70,7 +78,8 @@ namespace CoC_character_maker
                     {
                         exit = true;
                         break;
-                    } else
+                    }
+                    else
                     {
                         num2 = Convert.ToInt32(Input) - 1;
                         if (IsTwoD(num1) && IsTwoD(num2))
@@ -78,12 +87,14 @@ namespace CoC_character_maker
                             int carry = stats[num2];
                             stats[num2] = stats[num1];
                             stats[num1] = carry;
-                        } else if (!IsTwoD(num1) && !IsTwoD(num2))
+                        }
+                        else if (!IsTwoD(num1) && !IsTwoD(num2))
                         {
                             int carry = stats[num2];
                             stats[num2] = stats[num1];
                             stats[num1] = carry;
-                        } else
+                        }
+                        else
                         {
                             matching = false;
                         }
@@ -262,9 +273,9 @@ namespace CoC_character_maker
             Console.WriteLine("POW        " + character.POW);
             Console.WriteLine();
             Console.WriteLine("CR         " + character.CR);
-            Console.WriteLine("Cash       " + character.cash);
-            Console.WriteLine("Assets     " + character.assets);
-            Console.WriteLine("S. Level   " + character.S_LVL);
+            Console.WriteLine("Cash       $" + character.cash);
+            Console.WriteLine("Assets     $" + character.assets);
+            Console.WriteLine("S. Level   $" + character.S_LVL);
             Console.WriteLine();
             Console.WriteLine("Luck       " + character.luck);
             Console.WriteLine("HP         " + character.HP);
